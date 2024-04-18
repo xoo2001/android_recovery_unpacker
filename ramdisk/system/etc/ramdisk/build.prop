@@ -1,0 +1,22 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.bootimage.brand=Infinix
+ro.product.bootimage.device=X6739
+ro.product.bootimage.manufacturer=infinix
+ro.product.bootimage.model=Infinix GT 10 Pro
+ro.product.bootimage.name=twrp_X6739
+ro.bootimage.build.date=Mon Mar 18 11:40:52 UTC 2024
+ro.bootimage.build.date.utc=1710762052
+ro.bootimage.build.fingerprint=Infinix/X6739-GL/Infinix-X6739:12/SP1A.210812.016/231212V1754:user/release-keys
+ro.bootimage.build.id=SP2A.220405.004
+ro.bootimage.build.tags=test-keys
+ro.bootimage.build.type=eng
+ro.bootimage.build.version.incremental=eng.runner.20240318.114346
+ro.bootimage.build.version.release=16.1.0
+ro.bootimage.build.version.release_or_codename=16.1.0
+ro.bootimage.build.version.sdk=32
+# Auto-added by post_process_props.py
+persist.sys.usb.config=none
+# end of file
