@@ -1,3 +1,7 @@
+dir .backup 00 0 0
+file .backup/.magisk ramdisk/.backup/.magisk 00 0 0
+file .backup/.rmlist ramdisk/.backup/.rmlist 00 0 0
+slink .backup/init /system/bin/init 0750 0 0
 dir acct 0755 0 0
 dir apex 0755 0 0
 slink bin /system/bin 0644 0 0
@@ -22,7 +26,7 @@ file first_stage_ramdisk/fstab.mt6893 ramdisk/first_stage_ramdisk/fstab.mt6893 0
 dir first_stage_ramdisk/system 0755 0 0
 dir first_stage_ramdisk/system/bin 0755 0 0
 file first_stage_ramdisk/system/bin/e2fsck ramdisk/first_stage_ramdisk/system/bin/e2fsck 0755 0 0
-slink init /system/bin/init 0750 0 0
+file init ramdisk/init 0750 0 0
 file init.recovery.hlthchrg.rc ramdisk/init.recovery.hlthchrg.rc 0750 0 0
 file init.recovery.ldconfig.rc ramdisk/init.recovery.ldconfig.rc 0750 0 0
 file init.recovery.logd.rc ramdisk/init.recovery.logd.rc 0750 0 0
@@ -48,6 +52,11 @@ slink odm_dlkm/etc /odm/odm_dlkm/etc 0644 0 0
 file odm_file_contexts ramdisk/odm_file_contexts 0644 0 0
 file odm_property_contexts ramdisk/odm_property_contexts 0644 0 0
 dir oem 0755 0 0
+dir overlay.d 0750 0 0
+dir overlay.d/sbin 0750 0 0
+file overlay.d/sbin/magisk32.xz ramdisk/overlay.d/sbin/magisk32.xz 0644 0 0
+file overlay.d/sbin/magisk64.xz ramdisk/overlay.d/sbin/magisk64.xz 0644 0 0
+file overlay.d/sbin/stub.xz ramdisk/overlay.d/sbin/stub.xz 0644 0 0
 file plat_file_contexts ramdisk/plat_file_contexts 0644 0 0
 file plat_property_contexts ramdisk/plat_property_contexts 0644 0 0
 dir postinstall 0755 0 0
@@ -3327,8 +3336,8 @@ file system/etc/twrp.flags ramdisk/system/etc/twrp.flags 0644 0 0
 file system/etc/ueventd.rc ramdisk/system/etc/ueventd.rc 0644 0 0
 dir system/etc/vintf 0755 0 0
 dir system/etc/vintf/manifest 0755 0 0
-file system/etc/vintf/manifest/android.system.keystore2-service.xml ramdisk/system/etc/vintf/manifest/android.system.keystore2-service.xml 0644 0 0
 file system/etc/vintf/manifest.xml ramdisk/system/etc/vintf/manifest.xml 0644 0 0
+file system/etc/vintf/manifest/android.system.keystore2-service.xml ramdisk/system/etc/vintf/manifest/android.system.keystore2-service.xml 0644 0 0
 dir system/lib64 0755 0 0
 file system/lib64/android.frameworks.stats-V1-ndk_platform.so ramdisk/system/lib64/android.frameworks.stats-V1-ndk_platform.so 0644 0 0
 file system/lib64/android.frameworks.stats@1.0.so ramdisk/system/lib64/android.frameworks.stats@1.0.so 0644 0 0
@@ -3646,10 +3655,10 @@ file vendor/etc/selinux/vndservice_contexts ramdisk/vendor/etc/selinux/vndservic
 dir vendor/etc/vintf 0755 0 0
 file vendor/etc/vintf/compatibility_matrix.xml ramdisk/vendor/etc/vintf/compatibility_matrix.xml 0644 0 0
 dir vendor/etc/vintf/manifest 0755 0 0
+file vendor/etc/vintf/manifest.xml ramdisk/vendor/etc/vintf/manifest.xml 0644 0 0
 file vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml ramdisk/vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml 0644 0 0
 file vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml ramdisk/vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml 0644 0 0
 file vendor/etc/vintf/manifest/android.hardware.health@2.1.xml ramdisk/vendor/etc/vintf/manifest/android.hardware.health@2.1.xml 0644 0 0
-file vendor/etc/vintf/manifest.xml ramdisk/vendor/etc/vintf/manifest.xml 0644 0 0
 dir vendor/firmware 0755 0 0
 file vendor/firmware/mt6635_fm_v1_coeff.bin ramdisk/vendor/firmware/mt6635_fm_v1_coeff.bin 0644 0 0
 file vendor/firmware/mt6635_fm_v1_patch.bin ramdisk/vendor/firmware/mt6635_fm_v1_patch.bin 0644 0 0
